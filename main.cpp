@@ -38,7 +38,11 @@ int main()
         }
         else if(choice == 'A' || choice == 'a')
         {
-        	
+        	int new_num {};
+        	std::cout << "Enter an integer to add to the list: ";
+        	std::cin >> new_num;
+        	nums.push_back(new_num);
+        	std::cout << new_num << " added.\n";
         }
         else if(choice == 'M' || choice == 'm')
         {
@@ -54,11 +58,11 @@ int main()
         }
         else if(choice == 'Q' || choice == 'q')
         {
-        	std::cout << "Goodbye.";
+        	std::cout << "Goodbye.\n";
         }
         else
         {
-        	std::cout << "Unknown selection, please try again.";
+        	std::cout << "Unknown selection, please try again.\n";
         }
 
 
