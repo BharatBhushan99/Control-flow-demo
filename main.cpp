@@ -46,7 +46,23 @@ int main()
         }
         else if(choice == 'M' || choice == 'm')
         {
-        	
+        	if (nums.size() > 0)
+        	{
+        		double mean {};
+        		int sum {0};
+
+        		for (int num: nums)
+        		{
+        			sum += num;
+        		}
+
+        		mean = static_cast<double> (sum) / nums.size();
+        		std::cout << "Mean: " << mean;
+        	}
+        	else
+        	{
+        		std::cout << "Unable to calculate mean, no data.\n";
+        	}
         }
         else if(choice == 'S' || choice == 's')
         {
