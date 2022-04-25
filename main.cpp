@@ -66,7 +66,23 @@ int main()
         }
         else if(choice == 'S' || choice == 's')
         {
-        	
+
+        	if (nums.size() > 0)
+        	{
+        		int smallest_num = nums.at(0);
+
+        		for (int num: nums)
+        		{
+        			if (num < smallest_num)
+        				smallest_num = num;
+        		}
+
+        		std::cout << "Smallest number: " << smallest_num;
+        	}
+        	else
+        	{
+        		std::cout << "Unable to determine the smallest number, list is empty.\n";
+        	}
         }
         else if(choice == 'L' || choice == 'l')
         {
