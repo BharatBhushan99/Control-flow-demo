@@ -77,7 +77,7 @@ int main()
         				smallest_num = num;
         		}
 
-        		std::cout << "Smallest number: " << smallest_num;
+        		std::cout << "Smallest number: " << smallest_num << std::endl;
         	}
         	else
         	{
@@ -86,7 +86,22 @@ int main()
         }
         else if(choice == 'L' || choice == 'l')
         {
-        	
+        	if (nums.size() > 0)
+        	{
+        		int largest_num = nums.at(0);
+
+        		for (int num: nums)
+        		{
+        			if (num > largest_num)
+        				largest_num = num;
+        		}
+
+        		std::cout << "Largest number: " << largest_num << std::endl;
+        	}
+        	else
+        	{
+        		std::cout << "Unable to determine the largest number, list is empty.\n";
+        	}
         }
         else if(choice == 'Q' || choice == 'q')
         {
