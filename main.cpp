@@ -128,6 +128,11 @@ int main()
         	}
         	
         }
+        else if(choice == 'C' || choice == 'c')
+        {
+        	nums.clear();
+        	std::cout << "List is cleared.\n";
+        }
         else if(choice == 'Q' || choice == 'q')
         {
         	std::cout << "Goodbye.\n";
