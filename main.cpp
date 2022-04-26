@@ -14,6 +14,8 @@ int main()
         std::cout << "M - Display mean of the numbers" << std::endl;
         std::cout << "S - Display the smallest number" << std::endl;
         std::cout << "L - Display the largest number" << std::endl;
+        std::cout << "F - Find a number in the list" << std::endl;
+        std::cout << "C - Clear the list" << std::endl;
         std::cout << "Q - quit" << std::endl;
         
         std::cout << "\nEnter your choice: ";
@@ -102,6 +104,29 @@ int main()
         	{
         		std::cout << "Unable to determine the largest number, list is empty.\n";
         	}
+        }
+        else if(choice == 'F' || choice == 'f')
+        {
+        	int search_num {};
+        	int count {0};
+
+        	std::cout << "Enter the number to be searched: ";
+        	std::cin >> search_num;
+
+        	for (int num: nums)
+        	{
+    			if (num == search_num)
+    				count++;
+        	}
+        	if (count > 0)
+        	{
+        		std::cout << search_num << " occured " << count << " times in the list.\n";
+        	}
+        	else
+        	{
+        		std::cout << search_num << " does not exist in the list.\n";
+        	}
+        	
         }
         else if(choice == 'Q' || choice == 'q')
         {
